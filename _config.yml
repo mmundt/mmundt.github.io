@@ -35,6 +35,7 @@ linkedin: mirandamundt
 
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-feed
@@ -71,7 +72,7 @@ defaults:
 
 markdown: kramdown
 highlighter: rouge
-remote_theme: jekyllup/jekyll-theme-massively
+remote_theme: https://github.com/jekyllup/jekyll-theme-massively
 
 # Collections
 collections:
