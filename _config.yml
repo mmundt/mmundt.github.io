@@ -1,0 +1,85 @@
+# Site Settings
+lang: en
+
+title: Miranda Mundt
+description: Personal Website for Software Engineer Miranda R. Mundt
+
+#url: ""
+#baseurl: ""  # for testing, also check .circleci/circle_urls.sh
+#title-img: /assets/img/main_logo_transparent.png  # baseurl will be prepended
+#twitter-img: /assets/img/main_logo_transparent.png  # url + baseurl will be prepended
+#banner: /assets/img/main_logo_transparent.png
+#icon: /assets/img/main_logo_transparent.png
+#domain: https://us-rse.org
+
+email: miranda.r.mundt@gmail.com
+permalink: /:year-:month-:day-:title/
+
+#favicon: /assets/img/favicon.ico
+#hide_share_buttons: true
+#theme_color: '#eeeeee'
+fixed_navbar: top
+
+#paginate: 5
+#paginate_path: "/news/page:num/"
+
+excerpt_length: 500
+
+#hero_line_one: The United States Research Software Engineer Association
+#hero_line_two: A community of people who make research software happen.
+
+# social media
+github_username: mrmundt
+github_repo: mmundt.github.io
+linkedin: mirandamundt
+
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+livereload: true
+
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      show_sidebar: true
+  - 
+    scope:
+      path: "_events"
+      type: "events"
+    values:
+      layout: event
+
+
+markdown: kramdown
+highlighter: rouge
+remote_theme: jekyllup/jekyll-theme-massively
+
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /:collection/:path/
+  products: 
+    output: true
+    layout: product
+    image: https://via.placeholder.com/800x600
+    show_sidebar: false
